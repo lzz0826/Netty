@@ -1,0 +1,17 @@
+syntax = "proto3";//版本
+
+
+//指定生成到哪個包下 必須跟實際目錄對上 生成時會引響引入路徑
+package com.example.nettypro.codec;
+option java_package = "com.example.nettypro.googleProto.codec";
+option java_outer_classname = "StudentPOJO";//生成的外部類名 同時也是文件名
+
+
+
+message Student { //會在StudentPOJO 外部類生成一個內部類 Student 他是真正得POJO對象
+  int32 id = 1; // Student 類中有 一個屬性 名為 id 類型為int32(protobuf類型) 1代表屬性序號 不是值
+  string name = 2;
+
+}
+
+
